@@ -1,12 +1,3 @@
-/*
-
-    For original work, refer to ELF EXECUTABLE RECONSTRUCTION FROM A CORE IMAGE
-    by Silvio Cesare
-
-    http://repo.hackerzvoice.net/depot_ouah/core-reconstruction.txt
-
-*/
-
 #include <stdio.h>
 #include <stdarg.h>
 #include <sys/types.h>
@@ -312,7 +303,7 @@ int main(int argc, char **argv)
     rec_ehdr->e_shstrndx = 1;
 
     // open file for writing ELF
-    out = open("rebuild.elf", O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IXUSR);
+    out = open("rebuild.elf", O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR | S_IXUSR);
     if (out < 0) die("Failed to open output file");
 
     for (i = 0; i < 2; i++) {
@@ -849,7 +840,7 @@ int main(int argc, char **argv)
     shdr.sh_size = rel - verneed;
     shdr.sh_flags = SHF_ALLOC;
     shdr.sh_link = dynstr_index;
-    shdr.sh_info = note_index;
+    shdr.sh_info = interp_index;
     shdr.sh_addralign = 4;
     shdr.sh_entsize = 0;
 
