@@ -840,7 +840,7 @@ int main(int argc, char **argv)
     shdr.sh_size = rel - verneed;
     shdr.sh_flags = SHF_ALLOC;
     shdr.sh_link = dynstr_index;
-    shdr.sh_info = interp_index;
+    shdr.sh_info = verneednum;
     shdr.sh_addralign = 4;
     shdr.sh_entsize = 0;
 

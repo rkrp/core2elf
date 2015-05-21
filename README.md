@@ -99,7 +99,7 @@ Section Headers:
   [19] .rel.dyn          REL             08048290 000290 000008 08   A 14   0  4
   [20] .rel.plt          REL             08048298 000298 000018 08   A 14  16  4
   [21] .gnu.version      VERSYM          08048266 000266 00000a 02   A 14   0  2
-  [22] .gnu.version_r    VERNEED         08048270 000270 000020 00   A 13   4  4
+  [22] .gnu.version_r    VERNEED         08048270 000270 000020 00   A 13   1  4
   [23] .gnu.hash         GNU_HASH        080481ac 0001ac 000020 00   A 14   0  4
   [24] .got              PROGBITS        08049ffc 000ffc 000004 04  WA  0   0  4
 Key to Flags:
@@ -191,14 +191,8 @@ Version symbols section '.gnu.version' contains 5 entries:
   000:   0 (*local*)       2 (GLIBC_2.0)     0 (*local*)       2 (GLIBC_2.0)  
   004:   1 (*global*)   
 
-Version needs section '.gnu.version_r' contains 4 entries:
+Version needs section '.gnu.version_r' contains 1 entries:
  Addr: 0x0000000008048270  Offset: 0x000270  Link: 13 (.dynstr)
-  000000: Version: 1  File: libc.so.6  Cnt: 1
-  0x0010:   Name: GLIBC_2.0  Flags: none  Version: 2
-  000000: Version: 1  File: libc.so.6  Cnt: 1
-  0x0010:   Name: GLIBC_2.0  Flags: none  Version: 2
-  000000: Version: 1  File: libc.so.6  Cnt: 1
-  0x0010:   Name: GLIBC_2.0  Flags: none  Version: 2
   000000: Version: 1  File: libc.so.6  Cnt: 1
   0x0010:   Name: GLIBC_2.0  Flags: none  Version: 2
 
