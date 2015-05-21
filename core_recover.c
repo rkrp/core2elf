@@ -1,3 +1,12 @@
+/*
+
+     For original work, refer to ELF EXECUTABLE RECONSTRUCTION FROM A CORE IMAGE
+     by Silvio Cesare
+ 
+     http://repo.hackerzvoice.net/depot_ouah/core-reconstruction.txt
+
+*/
+
 #include <stdio.h>
 #include <stdarg.h>
 #include <sys/types.h>
